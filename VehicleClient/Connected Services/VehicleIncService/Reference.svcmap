@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="7e08ed57-50c0-48c6-8be0-0b8cf3e85fa8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8080/vehicle/meta" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="meta.xsd" MetadataType="Schema" ID="67375562-1046-46b8-aef1-08ccdea0ace9" SourceId="1" SourceUrl="http://localhost:8080/vehicle/meta?xsd=xsd2" />
+    <MetadataFile FileName="meta1.xsd" MetadataType="Schema" ID="928292a2-bd47-4d40-8a7a-e956f8a90ab0" SourceId="1" SourceUrl="http://localhost:8080/vehicle/meta?xsd=xsd0" />
+    <MetadataFile FileName="meta.disco" MetadataType="Disco" ID="43acd54f-b2a0-496c-a6ee-837ff7803e32" SourceId="1" SourceUrl="http://localhost:8080/vehicle/meta?disco" />
+    <MetadataFile FileName="meta2.xsd" MetadataType="Schema" ID="1585b137-a3df-4421-be73-c6dc46999b2f" SourceId="1" SourceUrl="http://localhost:8080/vehicle/meta?xsd=xsd1" />
+    <MetadataFile FileName="VehicleIncService.wsdl" MetadataType="Wsdl" ID="80995c20-a5c6-40ee-a086-2a215d012b8a" SourceId="1" SourceUrl="http://localhost:8080/vehicle/meta?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

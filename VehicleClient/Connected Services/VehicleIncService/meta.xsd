@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Motorcycle">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Vehicle">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Motorcycle" nillable="true" type="tns:Motorcycle" />
+  <xs:complexType name="Vehicle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="motorPower" type="xs:int" />
+      <xs:element minOccurs="0" name="wheels" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vehicle" nillable="true" type="tns:Vehicle" />
+  <xs:complexType name="Car">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:Vehicle">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Model" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="nbrOfDoors" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Car" nillable="true" type="tns:Car" />
+  <xs:complexType name="ArrayOfCar">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Car" nillable="true" type="tns:Car" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCar" nillable="true" type="tns:ArrayOfCar" />
+  <xs:complexType name="ArrayOfMotorcycle">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Motorcycle" nillable="true" type="tns:Motorcycle" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMotorcycle" nillable="true" type="tns:ArrayOfMotorcycle" />
+</xs:schema>

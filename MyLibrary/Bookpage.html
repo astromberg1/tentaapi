@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--<script src="Scripts/jquery-3.1.1.js"></script>-->
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<h2>bok sidan</h2>
+<button onclick="Allbooks()">hämta alla</button>
+<button onclick="GetbookById()">sök id</button>
+ange id <input type="text" id="inpid"/>   
+    
+<br/>
+
+<div id="result">
+     
+
+
+</div>
+    <br/>
+<div id="sokid" >
+    
+
+</div>
+
+</body>
+
+
+
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+     //   showlist();
+        Allbooks();
+    });
+
+    function GetbookById() {   
+        var  id  =  $("#inpid").val();
+        
+        $.ajax({   
+            url: "api/Book/GetBook/"+id,   
+            type: 'GET',   
+            dataType: "json",   
+            success: function (data) {   
+   
+                var  datavalue  =  data;
+                console.log(data);
+                var myJsonObject = datavalue;   
+   
+                var title = myJsonObject.Title;   
+                //var isbn = myJsonObject[0].ISBN;   
+                //var author = myJsonObject[0].Author;   
+                //var  price  =  myJsonObject[0].Price;
+
+                $("#sokid").append(title);
+                
+            },   
+            error: function (xhr) {   
+                alert(xhr.responseText);   
+            }   
+        });   
+    }
+
+    function Allbooks() {
+        $.ajax({
+            type: "GET",
+            url: "api/Book/GetAllBooks/",  
+            dataType: "json",
+            success: function(data) {
+             
+                var datavalue = data;
+                console.log(data);
+                var myJsonObject = datavalue;
+                contentType: "application/json";
+                $.each(myJsonObject,
+                    function(i, mobj) {
+                        $("#result").append(
+                            mobj.Title);
+
+                    });
+
+            },
+            error: function(xhr) {
+                alert(xhr.responseText);
+            }
+        });
+    }
+
+
+    //function showlist() {
+    //    var list = "";
+    //    var url = "api/book";
+    //    $.getJSON(url), function(data) {
+    //        $.each(data, function(index, element) {
+    //            $('ul').append($("<li>").text(element.title));
+    //            //$('ul').append($('<li>', {
+    //            //    text: element.title
+    //            });
+
+    //        }
+
+        
+
+
+    
+
+
+
+
+</script>

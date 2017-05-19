@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8080/vehicle/meta?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" />
+  <xs:element name="ByMotorcycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" minOccurs="0" name="motorcycle" nillable="true" type="q1:Motorcycle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ByMotorcycleResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ByCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" minOccurs="0" name="car" nillable="true" type="q2:Car" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ByCarResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCar">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" minOccurs="0" name="GetCarResult" nillable="true" type="q3:ArrayOfCar" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotorcycles">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMotorcyclesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" minOccurs="0" name="GetMotorcyclesResult" nillable="true" type="q4:ArrayOfMotorcycle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SellCar">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SellCarResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" minOccurs="0" name="SellCarResult" nillable="true" type="q5:Car" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SellMotorcycle">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SellMotorcycleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/VehicleIncServiceLibrary" minOccurs="0" name="SellMotorcycleResult" nillable="true" type="q6:Motorcycle" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
